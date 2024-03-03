@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta name="author" content="Aleksander Orzech">
+    <meta name="description" content="Credits: Code With Sahand. A webite created to search for images and find out more about them.">
+    <meta name="keywords" content="html, cs, js, browser, search, engine, image, images">
+
+    <title>Orzech Browser | v1.0.6</title>
+    <link rel="icon" href="icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css" type="text/css"/>
+  </head>
+  <body>
+
+    <div class="top-bar">
+        <nav>
+            <a class="top-btn" href="#home">Home</a>
+            <a class="top-btn" href="#about-browser">About Browser</a>
+            <a class="top-btn" onclick="window.location.reload()">Refresh</a>
+        </nav>
+    </div>
+
+    <section id="home">
+        <img draggable="false" class="logo" src="icon.png" alt="orzech browser logo">
+        <h1>Orzech Browser</h1>
+
+        <form id="form1">
+        <input type="text" id="search-input" placeholder="Search for images..." autocomplete="on" required>
+        <button id="search-button">Search</button>
+        </form>
+
+        <div class="search-results">
+        <div class="search-result">
+            <img src="github.png" alt="user908812 github" title="user908812 github"/>
+            <a href="https://github.com/user908812" target="_blank" rel="noopener noreferrer">My official github</a>
+        </div>
+        <div class="search-result">
+            <img src="tiktok.png" alt="@roccatkainpro tiktok" title="@roccatkainpro tiktok"/>
+            <a href="https://www.tiktok.com/@roccatkainpro_?lang=pl-PL" target="_blank" rel="noopener noreferrer">My tiktok account</a>
+        </div>
+        <div class="search-result">
+            <img src="changelog.png" alt="all changes" title="all changes"/>
+            <a href="index.html" target="_self" rel="noopener noreferrer">What changed</a>
+        </div>
+        </div>
+        <button id="show-more-button">Show more</button>
+    </section>
+    <hr>
+    <section id="about-browser">
+        <h1>About OrzechBrowser</h1>
+        <main>
+            <p class="description">
+                Introducing our innovative web browser – OrzechBrowser! With this powerful tool, users can effortlessly find images by simply typing in the desired keywords. Whether you're looking for inspiration, reference material, or just curious about a specific subject, our browser ensures a seamless and visually captivating experience.
+                Revolutionize your browsing experience by exploring the world of images directly from our browser. No more cumbersome searches through multiple tabs or search engines – just type in the name of what you're looking for, and let our browser do the rest.
+                Our Image Search is designed to be user-friendly, providing an intuitive interface for easy navigation. Enjoy the convenience of finding images that match your interests with a few simple keystrokes. Discover a world of possibilities right at your fingertips, all within the comfort of your preferred web browser.
+            </p>
+        </main>
+    </section>
+    <hr>
+    <script src="script.js"></script>
+  </body>
+</html>
