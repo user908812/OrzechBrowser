@@ -1,11 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Anta&family=Pixelify+Sans:wght@400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 :root {
     --DISCORD-COLOR-1: #7289da;
     --DISCORD-COLOR-2: #424549;
     --DISCORD-COLOR-3: #36393e;
     --DISCORD-COLOR-4: #282b30;
     --DISCORD-COLOR-5: #1e2124;
+    --LIGHT_GREY: #b9b8b8;
     --WHITE: #fff;
+}
+html {
+    scroll-behavior: smooth;
 }
 body {
     background-color: var(--DISCORD-COLOR-3);
@@ -34,7 +39,21 @@ nav .top-btn {
 nav .top-btn:hover {
     background-color: var(--DISCORD-COLOR-3);
 }
-
+.browser-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.logo {
+    width: 140px;
+    height: 140px;
+    border-radius: 70px;
+    margin-top: 50px;
+    margin-bottom: 10px;
+}
+.browser-title {
+    text-shadow: 1px 2px 2px #000;
+}
 h1 {
     font-size: 36px;
     font-family: "Poppins", sans-serif;
@@ -142,30 +161,20 @@ form {
 
 @media screen and (max-width: 2000px) {
 .search-result {
-    width: 30%;
-}
-.logo {
-    width: 140px;
-    height: 140px;
-    border-radius: 70px;
-    margin-left: 885px;
-    margin-top: 50px;
+width: 30%;
 }
 }
 @media screen and (max-width: 768px) {
 .search-result {
-    width: 45%;
+width: 30%;
 }
-.logo {
-    margin-left: 320px;
+.search-result {
+width: 45%;
 }
 }
 @media screen and (max-width: 480px) {
-.search-result {
+    .search-result {
     width: 100%;
-}
-.logo {
-    margin-left: 150px;
 }
 form {
     flex-direction: column;
@@ -190,4 +199,44 @@ main {
     line-height: 1.6;
     text-align: justify;
     color: #333;
+}
+.colors {
+    border: 1px solid var(--WHITE);
+    width: 190px;
+}
+label {
+    color: var(--WHITE);
+}
+.colorBtns {
+    cursor: pointer;
+}
+.bgMusic {
+    color: var(--WHITE);
+}
+audio {
+    width: 200px;
+}
+.rate-us {
+    margin-bottom: 0;
+}
+.rate-us-description {
+    color: #b9b8b8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.rate-form {
+    display: block;
+}
+legend {
+    color: var(--LIGHT_GREY);
+}
+.bottom-btns {
+    cursor: pointer;
+}
+.copyright {
+    color: var(--WHITE);
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }

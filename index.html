@@ -9,25 +9,27 @@
     <meta name="description" content="Credits: Code With Sahand. A webite created to search for images and find out more about them.">
     <meta name="keywords" content="html, cs, js, browser, search, engine, image, images">
 
-    <title>Orzech Browser | v1.0.6</title>
+    <title>OrzechBrowser — Privacy, simplified.</title>
     <link rel="icon" href="icon.png" type="image/x-icon">
     <link rel="stylesheet" href="style.css" type="text/css"/>
   </head>
   <body>
-
-    <div class="top-bar">
-        <nav>
-            <a class="top-btn" href="#home">Home</a>
-            <a class="top-btn" href="#about-browser">About Browser</a>
-            <a class="top-btn" onclick="window.location.reload()">Refresh</a>
-        </nav>
-    </div>
+        <div class="top-bar">
+            <nav>
+                <a class="top-btn" href="#home">Home</a>
+                <a class="top-btn" href="#about-browser">About</a>
+                <a class="top-btn" href="#settings">Settings</a>
+                <a class="top-btn" href="#rate">Rate</a>
+            </nav>
+        </div>
 
     <section id="home">
-        <img draggable="false" class="logo" src="icon.png" alt="orzech browser logo">
-        <h1>Orzech Browser</h1>
+            <div class="browser-logo">
+                <img draggable="false" class="logo" src="icon.png" alt="orzech browser logo">
+            </div>
+        <h1 class="browser-title">Orzech Browser</h1>
 
-        <form id="form1">
+        <form>
         <input type="text" id="search-input" placeholder="Search for images..." autocomplete="on" required>
         <button id="search-button">Search</button>
         </form>
@@ -49,6 +51,7 @@
         <button id="show-more-button">Show more</button>
     </section>
     <hr>
+
     <section id="about-browser">
         <h1>About OrzechBrowser</h1>
         <main>
@@ -58,8 +61,66 @@
                 Our Image Search is designed to be user-friendly, providing an intuitive interface for easy navigation. Enjoy the convenience of finding images that match your interests with a few simple keystrokes. Discover a world of possibilities right at your fingertips, all within the comfort of your preferred web browser.
             </p>
         </main>
+        <hr>
     </section>
-    <hr>
+
+    <section id="settings">
+        <h1>Settings</h1>
+        <div class="colors">
+            <label for="background-color">Background Color: </label>
+            <input class="background-color" type="color" name="background-color" id="background-color">
+            <br>
+            <button class="colorBtns" onclick="setChosenColor()">Set</button>
+            <button class="colorBtns" onclick="setDefaultColor()">Default</button>
+
+            <br><br>
+
+            <label for="buttons-color">Buttons Color: </label>
+            <input class="buttons-color" type="color" name="buttons-color" id="buttons-color">
+            <br>
+            <button class="colorBtns" onclick="setButtonsColor()">Set</button>
+            <button class="colorBtns" onclick="setDefaultButtonsColor()">Default</button>
+
+            <br><br>
+
+            <label for="gui-color">Gui Color: </label>
+            <input class="gui-color" type="color" name="gui-color" id="gui-color">
+            <br>
+            <button class="colorBtns" onclick="setGuiColor()">Set</button>
+            <button class="colorBtns" onclick="setDefaultGuiColor()">Default</button>
+        </div>
+        <p class="bgMusic">Background Music:</p>
+        <audio controls loop>
+            <source src="music.mp4" type="audio/mpeg">
+        </audio>
+        <hr>
+    </section>
+
+    <section id="rate">
+        <form class="rate-form" action="https://httpbin.org/post" method="post">
+            <h1 class="rate-us">Rate us!</h1>
+            <p class="rate-us-description">Let us know your thoughts and opinions.</p>
+
+                <fieldset>
+                <legend>Login</legend>
+                    <input type="text" name="username" id="username" placeholder="Username" minlength="4" autocomplete="username" required>
+                    <br><br>
+                    <input type="password" name="password" id="password" placeholder="Password" minlength="4" autocomplete="current-password" required>
+                    <br><br>
+                    <textarea name="opinion" id="opinion" cols="30" rows="10" placeholder="Enter your opinion..." autocomplete="off" required></textarea>
+                    <br>
+                    <button class="bottom-btns" type="submit">Send</button>
+                    <button class="bottom-btns" type="reset">Reset</button>
+            </fieldset>
+        </form>
+        <hr>
+    </section>
+
+    <footer>
+        <p class="copyright">Copyright &copy; 2024 Orzech</p>
+        <hr>
+    </footer>
+
     <script src="script.js"></script>
   </body>
 </html>

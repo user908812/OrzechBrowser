@@ -5,6 +5,10 @@ const searchInputEl = document.getElementById("search-input");
 const searchResultsEl = document.querySelector(".search-results");
 const showMoreButtonEl = document.getElementById("show-more-button");
 
+var username = document.getElementById('username');
+var password = document.getElementById('password');
+var opinion = document.getElementById('opinion');
+
 let inputData = "";
 let page = 1;
 
@@ -49,6 +53,76 @@ formEl.addEventListener("submit", (event) => {
   searchImages();
 });
 
+
+let chosenColor = document.querySelector('.background-color');
+let buttonsColor = document.querySelector('.buttons-color');
+let searchButtonEl = document.querySelector('#search-button');
+let guiColor = document.querySelector('.gui-color');
+
 showMoreButtonEl.addEventListener("click", () => {
   searchImages();
 });
+
+window.addEventListener("load", () => {
+  loadSavedColors();
+});
+
+function loadSavedColors() {
+  const savedBackgroundColor = localStorage.getItem("backgroundColor");
+  const savedButtonsColor = localStorage.getItem("buttonsColor");
+  const savedGuiColor = localStorage.getItem("guiColor");
+
+  if (savedBackgroundColor) {
+      document.body.style.backgroundColor = savedBackgroundColor;
+  } else {
+      // If no saved color, set default
+      setDefaultColor();
+  }
+
+  if (savedButtonsColor) {
+      searchButtonEl.style.backgroundColor = savedButtonsColor;
+      showMoreButtonEl.style.backgroundColor = savedButtonsColor;
+  } else {
+      setDefaultButtonsColor();
+  }
+
+  if (savedGuiColor) {
+      searchInputEl.style.backgroundColor = savedGuiColor;
+      document.querySelector('nav').style.backgroundColor = savedGuiColor;
+  } else {
+      setDefaultGuiColor();
+  }
+}
+
+function setChosenColor() {
+  const chosenColorValue = chosenColor.value;
+  document.body.style.backgroundColor = chosenColorValue;
+  localStorage.setItem("backgroundColor", chosenColorValue);
+}
+function setDefaultColor() {
+  document.body.style.backgroundColor = '#36393e';
+  localStorage.removeItem("backgroundColor");
+}
+function setButtonsColor() {
+  const buttonsColorValue = buttonsColor.value;
+  searchButtonEl.style.backgroundColor = buttonsColorValue;
+  showMoreButtonEl.style.backgroundColor = buttonsColorValue;
+  localStorage.setItem("buttonsColor", buttonsColorValue);
+}
+function setDefaultButtonsColor() {
+  searchButtonEl.style.backgroundColor = '#7289da';
+  showMoreButtonEl.style.backgroundColor = '#7289da';
+  localStorage.removeItem("buttonsColor");
+}
+
+function setGuiColor() {
+  const guiColorValue = guiColor.value;
+  searchInputEl.style.backgroundColor = guiColorValue;
+  document.querySelector('nav').style.backgroundColor = guiColorValue;
+  localStorage.setItem("guiColor", guiColorValue);
+}
+function setDefaultGuiColor() {
+  searchInputEl.style.backgroundColor = '#282b30';
+  document.querySelector('nav').style.backgroundColor = '#282b30';
+  localStorage.removeItem("guiColor");
+}
