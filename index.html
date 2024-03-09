@@ -70,29 +70,51 @@
             <label for="background-color">Background Color: </label>
             <input class="background-color" type="color" name="background-color" id="background-color">
             <br>
-            <button class="colorBtns" onclick="setChosenColor()">Set</button>
-            <button class="colorBtns" onclick="setDefaultColor()">Default</button>
+            <button class="pointer" onclick="setChosenColor()">Set</button>
+            <button class="pointer" onclick="setDefaultColor()">Default</button>
 
             <br><br>
 
             <label for="buttons-color">Buttons Color: </label>
             <input class="buttons-color" type="color" name="buttons-color" id="buttons-color">
             <br>
-            <button class="colorBtns" onclick="setButtonsColor()">Set</button>
-            <button class="colorBtns" onclick="setDefaultButtonsColor()">Default</button>
+            <button class="pointer" onclick="setButtonsColor()">Set</button>
+            <button class="pointer" onclick="setDefaultButtonsColor()">Default</button>
 
             <br><br>
 
             <label for="gui-color">Gui Color: </label>
             <input class="gui-color" type="color" name="gui-color" id="gui-color">
             <br>
-            <button class="colorBtns" onclick="setGuiColor()">Set</button>
-            <button class="colorBtns" onclick="setDefaultGuiColor()">Default</button>
+            <button class="pointer" onclick="setGuiColor()">Set</button>
+            <button class="pointer" onclick="setDefaultGuiColor()">Default</button>
         </div>
-        <p class="bgMusic">Background Music:</p>
-        <audio controls loop>
-            <source src="music.mp4" type="audio/mpeg">
-        </audio>
+        <br>
+        <div class="musics">
+            <p class="bgMusic">Background Music:</p>
+            <audio controls loop>
+                <source src="music.mp4" type="audio/mpeg">
+            </audio>
+            <p class="bgMusic">Or choose your own:</p>
+            <input type="file" name="yourMusic" id="yourMusic">
+            <br><br>
+            <audio id="musicbox" controls loop></audio>
+            <br>
+            <button class="pointer" onclick="applyMusic()">Apply</button>
+        </div>
+        <br>
+        <div class="font">
+            <p class="fonts">Wybierz font:</p>
+            <button class="pointer" onclick="arialFont()">Arial</button>
+            <br>
+            <button class="pointer" onclick="poppinsFont()">Poppins</button>
+            <br>
+            <button class="pointer" onclick="pixelifyFont()">Pixelify</button>
+            <br>
+            <button class="pointer" onclick="tahomaFont()">Tahoma</button>
+            <br>
+            <button class="pointer" onclick="pacificoFont()">Pacifico</button>
+        </div>
         <hr>
     </section>
 

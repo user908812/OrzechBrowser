@@ -126,3 +126,25 @@ function setDefaultGuiColor() {
   document.querySelector('nav').style.backgroundColor = '#282b30';
   localStorage.removeItem("guiColor");
 }
+let musicFile = document.getElementById('yourMusic');
+let audio = document.getElementById('musicbox');
+
+function applyMusic() {
+  const fileName = musicFile.value.split('\\').pop();
+  audio.src = fileName;
+}
+function arialFont() {
+    document.body.style.fontFamily = 'Arial';
+}
+function poppinsFont() {
+    document.body.style.fontFamily = '"Poppins"';
+}
+function pixelifyFont() {
+    document.body.style.fontFamily = '"Pixelify Sans"';
+}
+function tahomaFont() {
+    document.body.style.fontFamily = 'Tahoma';
+}
+function pacificoFont() {
+    document.body.style.fontFamily = '"Pacifico"';
+}
